@@ -1,8 +1,11 @@
 
 from flask_wtf import FlaskForm
 
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import TextAreaField
+
+from wtforms.validators import DataRequired, ValidationError, Email, EqualTo
+from wtforms.validators import Length
 
 from app.models import User
 
@@ -50,3 +53,9 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user:
                 raise ValidationError('Please use a different username.')
+
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[
+        DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField('Submit')

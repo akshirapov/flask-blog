@@ -9,9 +9,10 @@
                 {% if user.email %}<p>{{ user.email }}</p>{% endif %}
                 {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
                 {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
-                <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
-                {% if current_user == user %}
 
+                <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+
+                {% if current_user == user %}
                 {% elif not current_user.is_following(user) %}
                     <p><a href="{{ url_for('follow', username=user.username) }}">Follow</a></p>
                 {% else %}
@@ -29,4 +30,10 @@
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}
+    {% if next_url %}
+        <a href="{{ next_url }}">Older posts</a>
+    {% endif %}
+    {% if prev_url %}
+        <a href="{{ prev_url }}">Newer posts</a>
+    {% endif %}
 {% endblock%}
