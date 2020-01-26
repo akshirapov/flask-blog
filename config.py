@@ -1,10 +1,13 @@
-
 import os
+from dotenv import load_dotenv
+
+
 basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, '.env'))
 
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
@@ -18,5 +21,5 @@ class Config:
     ADMINS = ['your-email@example.com']
 
     POST_PER_PAGE = 25
-    LANGUAGES = ['en', 'ru']
+    LANGUAGES = ['en', 'ru;q=0.9']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
