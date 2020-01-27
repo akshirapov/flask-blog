@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-27 01:14+0800\n"
+"POT-Creation-Date: 2020-01-28 00:59+0800\n"
 "PO-Revision-Date: 2020-01-22 16:21+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app/__init__.py:24
+#: app/__init__.py:25
 msgid "Please log in to access this page."
 msgstr "Пожалуйста, войдите."
 
@@ -51,7 +51,7 @@ msgstr "Запомнить"
 msgid "Sign In"
 msgstr "Вход"
 
-#: app/auth/forms.py:21 app/auth/forms.py:40 app/main/forms.py:15
+#: app/auth/forms.py:21 app/auth/forms.py:40 app/main/forms.py:13
 msgid "Email"
 msgstr "Почта"
 
@@ -64,7 +64,7 @@ msgstr "Повторите пароль"
 msgid "Register"
 msgstr "Регистрация"
 
-#: app/auth/forms.py:31 app/main/forms.py:27
+#: app/auth/forms.py:31 app/main/forms.py:25
 msgid "Please use a different username."
 msgstr "Выберите другое имя."
 
@@ -96,61 +96,65 @@ msgstr "Сброс пароля"
 msgid "Your password has been reset."
 msgstr "Ваш пароль изменен."
 
-#: app/main/forms.py:14
+#: app/main/forms.py:12
 msgid "username"
 msgstr "Имя пользователя"
 
-#: app/main/forms.py:16
+#: app/main/forms.py:14
 msgid "About me"
 msgstr "О себе"
 
-#: app/main/forms.py:17 app/main/forms.py:33
+#: app/main/forms.py:15 app/main/forms.py:31
 msgid "Submit"
 msgstr "Принять"
 
-#: app/main/forms.py:31
+#: app/main/forms.py:29
 msgid "Say something"
 msgstr "Скажите что-нибудь"
 
-#: app/main/routes.py:38
+#: app/main/forms.py:35 app/main/routes.py:168
+msgid "Search"
+msgstr "Поиск"
+
+#: app/main/routes.py:39
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликован!"
 
-#: app/main/routes.py:50 app/templates/base.html:25
+#: app/main/routes.py:51 app/templates/base.html:25
 msgid "Home"
 msgstr "Главная"
 
-#: app/main/routes.py:78 app/templates/base.html:26
+#: app/main/routes.py:79 app/templates/base.html:26
 msgid "Explore"
 msgstr "Исследовать"
 
-#: app/main/routes.py:96
+#: app/main/routes.py:97
 msgid "User"
 msgstr "Профиль"
 
-#: app/main/routes.py:115 app/templates/edit_profile.html:5
+#: app/main/routes.py:116 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Редатирование профиля"
 
-#: app/main/routes.py:124 app/main/routes.py:141
+#: app/main/routes.py:125 app/main/routes.py:142
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Пользователь %(username)s не найден."
 
-#: app/main/routes.py:127
+#: app/main/routes.py:128
 msgid "You cannot follow yourself!"
 msgstr "Вы не можете подписаться на себя!"
 
-#: app/main/routes.py:132
+#: app/main/routes.py:133
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Вы подписались на %(username)s!"
 
-#: app/main/routes.py:144
+#: app/main/routes.py:145
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться на себя!"
 
-#: app/main/routes.py:149
+#: app/main/routes.py:150
 #, python-format
 msgid "You are not following %(username)s!"
 msgstr "Вы отписались от %(username)s!"
@@ -171,19 +175,19 @@ msgstr "Добро пожаловать в Микроблог"
 msgid "Microblog"
 msgstr "Микроблог"
 
-#: app/templates/base.html:30
+#: app/templates/base.html:37
 msgid "Login"
 msgstr "Вход"
 
-#: app/templates/base.html:32
+#: app/templates/base.html:39
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/base.html:33
+#: app/templates/base.html:40
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/base.html:71
+#: app/templates/base.html:78
 msgid "Error: Could not contact server."
 msgstr "Ошибка: Сервер не доступен."
 
@@ -198,6 +202,18 @@ msgstr "Новые посты"
 #: app/templates/index.html:22 app/templates/user.html:36
 msgid "Older posts"
 msgstr "Старые посты"
+
+#: app/templates/search.html:4
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: app/templates/search.html:13
+msgid "Previous results"
+msgstr "Предыдущие результаты"
+
+#: app/templates/search.html:18
+msgid "Next results"
+msgstr "Следующие результаты"
 
 #: app/templates/user.html:8
 msgid "User:"
