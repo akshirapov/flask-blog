@@ -77,7 +77,7 @@ class User(UserMixin, db.Model):
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return f'<User {self.username}>'
+        return '<User {}>'.format(self.username)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -88,7 +88,8 @@ class User(UserMixin, db.Model):
     def avatar(self, size):
         'a'.encode()
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
-        return f'https://www.gravatar.com/avatar/{digest}?d=identicon&s={size}'
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.\
+            format(digest, size)
 
     followed = db.relationship(
         'User',
@@ -145,4 +146,4 @@ class Post(SearchableMixin, db.Model):
     language = db.Column(db.String(5))
 
     def __repr__(self):
-        return f'<Post {self.body}>'
+        return '<Post {}>'.format(self.body)
