@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-01-28 00:59+0800\n"
+"POT-Creation-Date: 2020-01-30 15:08+0800\n"
 "PO-Revision-Date: 2020-01-22 16:21+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -112,58 +112,58 @@ msgstr "Принять"
 msgid "Say something"
 msgstr "Скажите что-нибудь"
 
-#: app/main/forms.py:35 app/main/routes.py:168
+#: app/main/forms.py:35 app/main/routes.py:174
 msgid "Search"
 msgstr "Поиск"
 
-#: app/main/routes.py:39
+#: app/main/routes.py:38
 msgid "Your post is now live!"
 msgstr "Ваш пост опубликован!"
 
-#: app/main/routes.py:51 app/templates/base.html:25
+#: app/main/routes.py:50 app/templates/base.html:25
 msgid "Home"
 msgstr "Главная"
 
-#: app/main/routes.py:79 app/templates/base.html:26
+#: app/main/routes.py:78 app/templates/base.html:26
 msgid "Explore"
 msgstr "Исследовать"
 
-#: app/main/routes.py:97
+#: app/main/routes.py:96
 msgid "User"
 msgstr "Профиль"
 
-#: app/main/routes.py:116 app/templates/edit_profile.html:5
+#: app/main/routes.py:122 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Редатирование профиля"
 
-#: app/main/routes.py:125 app/main/routes.py:142
+#: app/main/routes.py:131 app/main/routes.py:148
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Пользователь %(username)s не найден."
 
-#: app/main/routes.py:128
+#: app/main/routes.py:134
 msgid "You cannot follow yourself!"
 msgstr "Вы не можете подписаться на себя!"
 
-#: app/main/routes.py:133
+#: app/main/routes.py:139
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Вы подписались на %(username)s!"
 
-#: app/main/routes.py:145
+#: app/main/routes.py:151
 msgid "You cannot unfollow yourself!"
 msgstr "Вы не можете отписаться на себя!"
 
-#: app/main/routes.py:150
+#: app/main/routes.py:156
 #, python-format
 msgid "You are not following %(username)s!"
 msgstr "Вы отписались от %(username)s!"
 
-#: app/templates/_post.html:12
+#: app/templates/_post.html:16
 msgid "said"
 msgstr "сказал"
 
-#: app/templates/_post.html:23
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Перевести"
 
@@ -235,13 +235,27 @@ msgstr "подписки"
 msgid "Edit your profile"
 msgstr "Редактировать"
 
-#: app/templates/user.html:17
+#: app/templates/user.html:17 app/templates/user_popup.html:21
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:19
+#: app/templates/user.html:19 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "Отписаться"
+
+#: app/templates/user_popup.html:13
+msgid "Last seen on"
+msgstr "В последний раз был"
+
+#: app/templates/user_popup.html:16
+#, python-format
+msgid "%(count)d followers"
+msgstr "%(count)d подписчики"
+
+#: app/templates/user_popup.html:17
+#, python-format
+msgid "%(count)d following"
+msgstr "%(count)d подписки"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
